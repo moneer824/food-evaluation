@@ -8,6 +8,9 @@ async function food_list() {
 food_list()
 
 let parent = document.getElementById('parent')
+let cut = document.getElementById('cut')
+let btn_log = document.getElementById('btn_log')
+let login = document.getElementById('login')
 function showfood(meals) {
 
     meals.forEach(({ strMeal, strMealThumb, idMeal }) => {
@@ -44,4 +47,12 @@ function cart(obj) {
     let pro = JSON.parse(localStorage.getItem('foodie'))
     pro.push(obj)
     localStorage.setItem('foodie',JSON.stringify(pro))
+}
+
+cut.onclick = function () {
+    login.style.display = 'none'
+}
+btn_log.onclick = function () {
+    login.style.display = 'flex'
+    
 }

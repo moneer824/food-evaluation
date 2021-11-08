@@ -32,8 +32,15 @@ sum = sum +Number(idMeal[2] + idMeal[3] + idMeal[4])
 
 let total_price = document.createElement('p')
 total_price.innerText = 'Total Price Rs. '+sum
+
+let btn_1 = document.createElement('button')
+btn_1.innerText = 'Order Now'
+
+btn_1.onclick = function () {
+    window.location.href = "checkout.html"
+}
 console.log(sum)
-total.append(total_price)
+total.append(total_price,btn_1)
 
 
 function cart(i) {
