@@ -39,7 +39,6 @@ btn_1.innerText = 'Order Now'
 btn_1.onclick = function () {
     window.location.href = "checkout.html"
 }
-console.log(sum)
 total.append(total_price,btn_1)
 
 
@@ -52,5 +51,14 @@ function cart(i) {
 }
 
 
-var arr = [1, 2, 32, 55]
-console.log(arr.splice(1,1))
+let cut = document.getElementById('cut')
+let btn_log = document.getElementById('btn_log')
+let login = document.getElementById('login')
+
+cut.onclick = function () {
+    login.style.display = 'none'
+}
+btn_log.onclick = function () {
+    login.style.display = 'flex'
+    
+}
